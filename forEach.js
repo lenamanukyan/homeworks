@@ -1,16 +1,13 @@
-let family = ["Sofi","Hen", "Len"];
+const family = ["Sofi","Hen", "Len"];
 
-function forEch(arr, callback){
+function customForEach(arr, callback){
   for(let i = 0; i < arr.length; i++){
-    let item = (arr[i]);
-    let index = (i);
-    let array = (arr);
-    callback(item, index, array);
+    callback(arr[i], i, arr);
   }
 };
 
-function cb(it, ind, ar){
-  console.log(it, ind, ar)
+function cb(item, index, arr){
+  console.log(item, index, arr)
 };
 
-forEch(family, cb);
+customForEch(family, cb);
