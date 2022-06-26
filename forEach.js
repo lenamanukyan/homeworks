@@ -10,4 +10,4 @@ function cb(item, index, arr){
   console.log(item, index, arr)
 };
 
-customForEch(family, cb);
+customForEach(family, cb);
