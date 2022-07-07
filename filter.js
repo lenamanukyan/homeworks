@@ -26,7 +26,7 @@ console.log(sortArr);
 // Sort 2 homework
 const sortArr2 = ["HTML", "JavaScript", "CSS"]; 
 function copySorted(arr){ 
-  let newArrSort = arr.concat()
+  const newArrSort = arr.concat()
    return newArrSort.sort() 
 }; 
 const sorted = copySorted(sortArr2); 
