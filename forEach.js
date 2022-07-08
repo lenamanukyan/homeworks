@@ -1,3 +1,4 @@
+// ForEach
 const family = ["Sofi","Hen", "Len"];
 
 function customForEach(arr, callback){
@@ -11,3 +12,4 @@ function cb(item, index, arr){
 };
 
 customForEach(family, cb);
+
