@@ -11,6 +11,7 @@ function cb(item, index, arr){
 };
 
 customForEach(family, cb);
+<<<<<<< HEAD
 
 // Slice
 const array = ["t", "e", "s", "t"];
@@ -43,3 +44,5 @@ function concat(arrayOne, arrayTwo){
   return arr;
 };
 console.log(concat([1,2,3],family)); 
+=======
+>>>>>>> 9fc0c8e029f5ca23e12697b53cc6a0e125cb7386
