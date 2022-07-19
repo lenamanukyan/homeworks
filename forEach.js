@@ -13,33 +13,42 @@ function cb(item, index, arr){
 customForEach(family, cb);
 
 // Slice
-const array = ["t", "e", "s", "t"];
+const array = ["t", "e", "s", "r"];
 
-function slice(start, end) {
+function slice(arr,start,end) {
+  end = end || arr.length;
   const newArr = [];
-  for(let i = start; i < array.length; i++){
-    newArr.push(array[i]);
-    if (array[i] === array[end - 1]) return newArr ;
+  for(let i = start; i < arr.length; i++){
+    newArr.push(arr[i]);
+    if (arr[i] === arr[end - 1]) return newArr ;
   }
 };
-
-console.log(slice(0,3));
+ 
+console.log('Slice', slice(array, 0));
 
 // IndexOf
-function indexOf(item){
-  for (let i = 0; i < array.length; i++){
-    if(array[i] === item){
-      return i
+function indexOf(item) {
+  for (let i = 0; i <= array.length; i++) {
+    if (array[i] === item) {
+      return i;
+    } else if (array[i] === undefined) {
+      return -1;
     }
   }
-};
+}
 
-console.log(indexOf("e"));
+console.log(indexOf('f'));
 
-// Concat
-function concat(arrayOne, arrayTwo){
+//Concat
+
+function concat(...arrays) {
   const arr = [];
-  arr.push(array+arrayOne+arrayTwo);
+  for(let i = 0; i < arrays.length; i++) {
+    for(let j = 0; j < arrays[i].length; j++) {
+      arr.push(arrays[i][j]);
+    }
+  }
   return arr;
-};
-console.log(concat([1,2,3],family)); 
+}
+console.log("Concat", concat([1, 2, 3, 4], ["d", 58, 5], [99]));
+
