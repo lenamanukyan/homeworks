@@ -13,42 +13,46 @@ function cb(item, index, arr){
 customForEach(family, cb);
 
 // Slice
-const array = ["t", "e", "s", "r"];
+const array = ["t", "e", "s", "t"];
 
 function slice(arr,start,end) {
-  end = end || arr.length;
+  const finish = end || arr.length;
   const newArr = [];
-  for(let i = start; i < arr.length; i++){
+  for(let i = start; i < finish; i++){
     newArr.push(arr[i]);
-    if (arr[i] === arr[end - 1]) return newArr ;
   }
+  return newArr;
 };
  
 console.log('Slice', slice(array, 0));
 
 // IndexOf
 function indexOf(item) {
+  let result = -1;
   for (let i = 0; i <= array.length; i++) {
     if (array[i] === item) {
-      return i;
-    } else if (array[i] === undefined) {
-      return -1;
+      result = i;
     }
   }
+  return result;
 }
 
-console.log(indexOf('f'));
+console.log(indexOf("s"));
 
 //Concat
 
 function concat(...arrays) {
   const arr = [];
   for(let i = 0; i < arrays.length; i++) {
-    for(let j = 0; j < arrays[i].length; j++) {
-      arr.push(arrays[i][j]);
+    const el = Array.isArray(arrays[i]);
+    if(el === true){
+      for(let j = 0; j < arrays[i].length; j++){
+        arr.push(arrays[i][j]);
+      }
+    } else {
+      arr.push(arrays[i]);
     }
   }
   return arr;
 }
-console.log("Concat", concat([1, 2, 3, 4], ["d", 58, 5], [99]));
-
+console.log("Concat", concat([1, 2, 3, 4], ["d", 58, 5], [99], "k"));
