@@ -28,15 +28,13 @@ console.log('Slice', slice(array, 0));
 
 // IndexOf
 function indexOf(item) {
-  let result = -1;
   for (let i = 0; i <= array.length; i++) {
     if (array[i] === item) {
-      result = i;
+      return i;
     }
   }
-  return result;
-}
-
+  return -1;
+};
 console.log(indexOf("s"));
 
 //Concat
@@ -44,8 +42,8 @@ console.log(indexOf("s"));
 function concat(...arrays) {
   const arr = [];
   for(let i = 0; i < arrays.length; i++) {
-    const el = Array.isArray(arrays[i]);
-    if(el === true){
+    const isElementArray  = Array.isArray(arrays[i]);
+    if(isElementArray){
       for(let j = 0; j < arrays[i].length; j++){
         arr.push(arrays[i][j]);
       }
