@@ -13,17 +13,6 @@ function cb(item, index, arr){
 customForEach(family, cb);
 
 
-// IndexOf
-function indexOf(item) {
-  for (let i = 0; i <= array.length; i++) {
-    if (array[i] === item) {
-      return i;
-    }
-  }
-  return -1;
-};
-console.log(indexOf("s"));
-
 //Concat
 
 function concat(...arrays) {
