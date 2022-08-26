@@ -26,17 +26,6 @@ function slice(arr,start,end) {
  
 console.log('Slice', slice(array, 0));
 
-// IndexOf
-function indexOf(item) {
-  for (let i = 0; i <= array.length; i++) {
-    if (array[i] === item) {
-      return i;
-    }
-  }
-  return -1;
-};
-console.log(indexOf("s"));
-
 //Concat
 
 function concat(...arrays) {
