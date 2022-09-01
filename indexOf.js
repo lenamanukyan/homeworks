@@ -10,4 +10,3 @@ function indexOf(item) {
     return -1;
   };
   console.log(indexOf("s"));
-  
