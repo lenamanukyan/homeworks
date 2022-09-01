@@ -1,11 +1,11 @@
 let arr = [1, 2, 3, 6, 4];
-const num = arr.length;
 
 function reverse (arr){
-  for (let i = arr.length; i > 0; i--){
-    arr.push(arr[i - 1]);
+  let newArr = [];
+  for (let i = arr.length - 1; i >= 0; i--){
+    newArr.push(arr[i]);
   }
-  arr.splice(0,num);
+  arr = newArr
   return arr;
 };
 
