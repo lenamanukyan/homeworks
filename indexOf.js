@@ -10,7 +10,3 @@ function indexOf(item) {
     return -1;
   };
   console.log(indexOf("s"));
-<<<<<<< HEAD
-  
-=======
->>>>>>> 62c24c1471d4ac8b601e46f5dc8874fe0c22ae20

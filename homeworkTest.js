@@ -11,3 +11,21 @@ function testReduce(arr){
   
 console.log(testMap(array));
 console.log(testReduce(array));
+
+function greaterThenThreeFilter(arr){
+  return arr.filter(item => item > 3)
+}
+
+function greaterThenThreeReduce(arr){
+  let newArr = [];
+  arr.reduce((a,b) => {
+    a = b
+    if(a > 3){
+      newArr.push(a)
+    };
+  })
+  return newArr
+}
+
+console.log(greaterThenThreeFilter([1,2,3,4,5]));
+console.log(greaterThenThreeReduce([1,2,3,4,5]));
